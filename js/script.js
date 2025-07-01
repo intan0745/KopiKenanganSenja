@@ -13,3 +13,20 @@ document.querySelector('#search-button').onclick = (e) => {
   searchBox.focus();
   e.preventDefault();
 };
+// Toggle Shopping Cart
+const shoppingCart = document.querySelector('.shopping-cart');
+const cartButton = document.querySelector('#shopping-cart-button');
+
+cartButton.addEventListener('click', function (e) {
+  e.preventDefault(); 
+  shoppingCart.classList.toggle('active');
+});
+
+// Fungsi Hapus Item di Keranjang
+const removeItemButtons = document.querySelectorAll('.remove-item');
+
+removeItemButtons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    this.parentElement.remove();
+  });
+});
