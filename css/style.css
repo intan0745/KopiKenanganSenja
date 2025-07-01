@@ -74,3 +74,10 @@ body {
 .navbar .navbar-extra a:hover {
   color: var(--primary);
 }
+
+/* Media Queries */
+@media (max-width: 1366px) {
+  html {
+    font-size: 62.5%;
+  }
+}
