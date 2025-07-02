@@ -22,11 +22,11 @@ cartButton.addEventListener('click', function (e) {
   shoppingCart.classList.toggle('active');
 });
 
-// Fungsi Hapus Item di Keranjang
+// menambah dan menghapus item dari keranjang
 const removeItemButtons = document.querySelectorAll('.remove-item');
 
 removeItemButtons.forEach(function (button) {
   button.addEventListener('click', function () {
     this.parentElement.remove();
-  });
+  });
 });
