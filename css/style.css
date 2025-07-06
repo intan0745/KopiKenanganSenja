@@ -206,6 +206,7 @@ body {
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
 }
+
 .hero .content {
   padding: 1.4rem 7%;
   /* max-width: 60rem; */
@@ -607,6 +608,26 @@ footer .credit a {
     font-size: 75%;
   }
 }
+
+/*
+Perbedaan antara mask.svg dan clip-path:
+
+1. mask.svg:
+   - Menggunakan file SVG sebagai masker (mask), biasanya dengan gradasi warna hitam ke putih.
+   - Warna putih = terlihat penuh, hitam = transparan, abu-abu = transparansi sebagian.
+   - Bisa menciptakan efek transparansi halus dan kompleks, cocok untuk efek visual artistik atau transisi lembut.
+
+2. clip-path:
+   - Hanya memotong elemen mengikuti bentuk geometris atau path SVG.
+   - Area luar bentuk akan hilang total (tanpa efek transparansi bertahap).
+   - Lebih ringan dan cocok untuk pemotongan tegas (misalnya bentuk lingkaran, polygon, dll).
+
+Kesimpulan:
+- Gunakan `mask.svg` jika butuh kontrol transparansi per piksel (soft edges).
+- Gunakan `clip-path` jika hanya perlu memotong elemen secara tegas mengikuti bentuk tertentu.
+*/
+
+
 /* Tablet */
 @media (max-width: 758px) {
   html {
